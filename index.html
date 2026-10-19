@@ -50,6 +50,48 @@ input,textarea{width:100%;font:inherit;font-size:15px;padding:10px;border:1px so
 textarea{min-height:120px}
 button{font:inherit;font-size:15px;padding:12px;border:0;border-radius:6px;background:var(--kon);color:var(--kinari);letter-spacing:.2em}
 #sent{display:none;font-size:14px;color:var(--kon)}
+.gijutsu{background:#fbf8f1;border:1px solid var(--sen);border-radius:8px;padding:16px 18px;margin-top:14px;font-size:14px}
+.gijutsu p{margin:0 0 8px}
+.kazu{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px;text-align:center}
+.kazu div{border-top:1px solid var(--kon);padding-top:6px;font-size:11px;color:var(--usu);line-height:1.5}
+.kazu b{display:block;font-family:'EB Garamond',serif;font-weight:400;font-size:26px;color:var(--kon);letter-spacing:0}
+.case{margin-top:30px}
+.case h3{font-weight:600;font-size:16px;margin:0 0 10px;letter-spacing:.06em}
+.case h3 span{font-family:'EB Garamond',serif;color:var(--kon);font-weight:400;margin-right:8px}
+.case p{font-size:14px;margin:8px 0 0}
+.case .kekka{color:var(--kon);font-size:13px}
+.mock{border:1px solid var(--sumi);border-radius:18px;background:#fffdf8;padding:12px;font-family:'Yu Gothic','Hiragino Sans',sans-serif;font-size:12px;line-height:1.5;letter-spacing:0;color:var(--sumi);max-width:340px;margin:0 auto;box-shadow:0 6px 18px rgba(31,48,80,.08)}
+.mock .bar{font-size:11px;color:var(--usu);border-bottom:1px solid var(--sen);padding-bottom:6px;margin-bottom:8px;display:flex;justify-content:space-between}
+.mock .row{display:flex;justify-content:space-between;align-items:center;gap:8px;border:1px solid var(--sen);border-radius:8px;padding:6px 8px;margin:5px 0;background:#fff}
+.mock .tag{font-size:10px;padding:1px 7px;border-radius:999px;background:var(--kinari);color:var(--usu);white-space:nowrap}
+.mock .tag.on{background:var(--kon);color:#fff}
+.mock .ask{border:1px solid var(--kon);border-radius:8px;padding:8px;margin-top:8px}
+.mock .bt{display:flex;gap:6px;margin-top:6px}
+.mock .bt span{flex:1;text-align:center;border:1px solid var(--kon);border-radius:6px;padding:4px;color:var(--kon)}
+.mock .bt span:first-child{background:var(--kon);color:#fff}
+.mock .fu{max-width:82%;border-radius:12px;padding:7px 10px;margin:6px 0;background:var(--kinari)}
+.mock .fu small{display:block;color:var(--usu);font-size:10.5px;margin-top:3px;border-top:1px dashed var(--sen);padding-top:3px}
+.mock .fu.me{margin-left:auto;background:#e4e8f0}
+.mock .doc{border:1px dashed var(--kon);border-radius:8px;padding:6px 8px;margin-top:8px;color:var(--kon);font-size:11px}
+.mock .lot{display:flex;gap:12px;align-items:center}
+.mock .ph{width:84px;height:100px;border-radius:6px;background:linear-gradient(160deg,#2a2622,#4a3b2c 55%,#1d1c1a);flex:none;position:relative;overflow:hidden}
+.mock .ph::before{content:"";position:absolute;left:22px;top:12px;width:40px;height:26px;border-radius:20px 20px 6px 6px;background:#7a5a30}
+.mock .ph::after{content:"";position:absolute;left:18px;top:44px;width:48px;height:50px;border-radius:6px;background:repeating-linear-gradient(0deg,#3c2f22 0 6px,#8a6a3a 6px 8px)}
+.mock .sold{display:inline-block;margin-top:6px;border:1px solid #9b2d20;color:#9b2d20;border-radius:4px;padding:0 6px;font-size:11px;letter-spacing:.1em}
+.mock .week{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;text-align:center;font-size:10.5px}
+.mock .week div{border-radius:6px;padding:5px 0;background:#fff;border:1px solid var(--sen)}
+.mock .week .k{background:var(--kon);color:#fff;border-color:var(--kon)}
+.mock .week .a{background:#e9e1cf}
+.mock .week i{display:block;font-style:normal;font-size:9px;color:var(--usu);margin-top:2px;letter-spacing:-.05em}
+.mock .week .k i{color:#dfe4ee}
+.mock .url{border:1px solid var(--sen);border-radius:6px;padding:6px 8px;color:var(--usu);background:#fff;overflow:hidden;white-space:nowrap}
+.mock .play{display:flex;align-items:center;gap:8px;margin-top:8px;border-radius:8px;background:var(--kon);color:#fff;padding:8px 10px}
+.mock .play b{width:0;height:0;border-left:10px solid #fff;border-top:6px solid transparent;border-bottom:6px solid transparent}
+.mock .play em{flex:1;height:3px;background:rgba(255,255,255,.35);border-radius:2px;position:relative}
+.mock .play em::before{content:"";position:absolute;left:0;top:0;height:3px;width:38%;background:#fff;border-radius:2px}
+.mock .meishi{aspect-ratio:91/55;border:1px solid var(--sen);border-radius:4px;background:var(--kinari);display:flex;align-items:center;justify-content:center;gap:18px;font-family:'Shippori Mincho',serif}
+.mock .qr{width:40px;height:40px;background:repeating-conic-gradient(var(--sumi) 0 25%,#fff 0 50%) 0 0/10px 10px;border:3px solid #fff;outline:1px solid var(--sumi)}
+.chu{font-size:12px;color:var(--usu);margin-top:26px}
 footer{text-align:center;font-size:12px;color:var(--usu);padding:30px 0 50px;border-top:1px solid var(--sen)}
 </style>
 </head>
@@ -62,7 +104,7 @@ footer{text-align:center;font-size:12px;color:var(--usu);padding:30px 0 50px;bor
 <h1>加藤一央</h1>
 <div class="roma">Kazuteru Kato</div>
 <p class="lead">東京・八王子。<br>物販と、AIを使った仕事をしています。</p>
-<nav><a href="#buppan">物販</a><a href="#ai">AI事業</a><a href="#renraku">連絡する</a></nav>
+<nav><a href="#buppan">物販</a><a href="#ai">AI事業</a><a href="#jirei">事例</a><a href="#renraku">連絡する</a></nav>
 </header>
 
 <section id="buppan">
@@ -97,14 +139,91 @@ footer{text-align:center;font-size:12px;color:var(--usu);padding:30px 0 50px;bor
 <p class="rei">例：海外の買い手とのやりとり、手続きの下調べ</p></div>
 </section>
 
-<section>
-<h2>やってきた事<small>WORKS</small></h2>
-<ul class="done">
-<li>甲冑（鎧兜）・骨董の海外販売（海外のオークション）</li>
-<li>サボテン・多肉植物の輸出申請の代行（海外のお客様向け）</li>
-<li>部屋の3D、スマホのアプリ、仕事の道具づくり</li>
-<li>本の出版『そのとき、どう動くか』（2026年8月・電子書籍）</li>
-</ul>
+<section id="jirei">
+<h2>事例<small>WORKS</small></h2>
+<div class="gijutsu">
+<p>わたしはプログラマーではありません。AIに「こういう物がほしい」と言葉で伝えて作らせ、毎日自分で使いながら直す、というやり方で仕事の道具を増やしてきました。</p>
+<p>専門の言葉が分からなくても、困りごとさえ分かれば形にできます。使う人の目線で作れるのが強みです。</p>
+<div class="kazu">
+<div><b>40</b>動いている<br>AIの担当</div>
+<div><b>70+</b>自分で作った<br>道具</div>
+<div><b>1000+</b>使いながら<br>直した回数</div>
+</div>
+</div>
+
+<div class="case">
+<h3><span>01</span>ひとりで動かす、AIの会社</h3>
+<div class="mock">
+<div class="bar"><span>FIVE RINGS オフィス</span><span>スマホから</span></div>
+<div class="row">翻訳の担当<span class="tag">お客様への返事の案</span></div>
+<div class="row">物販の担当<span class="tag">出品の文を英語に</span></div>
+<div class="row">予定の担当<span class="tag">来週の段取り</span></div>
+<div class="row">家計の担当<span class="tag">今月の出入り</span></div>
+<div class="ask">決めてほしい事：値下げを入れますか？
+<div class="bt"><span>入れる</span><span>待つ</span><span>保留</span></div></div>
+</div>
+<p>翻訳・物販・予定・家計・調べ物など、仕事ごとに担当のAIを置いて、ひとつの画面にまとめました。頼むのはスマホから一言。AIは自分で動き、人が決めるべき所だけをボタンで聞いてきます。</p>
+<p class="kekka">結果：本業のかたわら、物販と制作をひとりで回せるようになりました。</p>
+</div>
+
+<div class="case">
+<h3><span>02</span>海外のお客様専用の窓</h3>
+<div class="mock">
+<div class="bar"><span>お客様との窓</span><span>韓国語 ⇄ 日本語</span></div>
+<div class="fu">이 선인장도 보낼 수 있나요?<small>このサボテンも送れますか？</small></div>
+<div class="fu me">はい。輸出の許可を取ってから送ります。<small>네. 수출 허가를 받은 뒤 보내드릴게요.</small></div>
+<div class="doc">書類：輸出許可の申請（ワシントン条約）　下書きできました</div>
+</div>
+<p>韓国のお客様と、植物の輸出の手続きを進めるための専用ページです。お客様は韓国語、こちらは日本語のまま書けば、AIが訳して届けます。書類の下書きや送る前の確認も、同じ画面で進みます。</p>
+<p class="kekka">結果：言葉の壁なく、海外のお客様と手続きを最後まで進められます。</p>
+</div>
+
+<div class="case">
+<h3><span>03</span>甲冑を海外のオークションへ</h3>
+<div class="mock">
+<div class="bar"><span>Auction</span><span>Europe</span></div>
+<div class="lot"><div class="ph"></div>
+<div><b>Japanese Samurai Armour</b><br>Full set<br><span style="color:var(--usu)">with storage box</span><br><span class="sold">SOLD</span></div></div>
+</div>
+<p>撮影の段取り、英語の説明文、寸法や時代の書き方、発送の手配まで、AIと手分けして進めました。ヨーロッパの美術品オークションで落札され、海外のお客様のもとへ届いています。</p>
+<p class="kekka">結果：海外の売り場でも、出品から発送までひとりで完結。</p>
+</div>
+
+<div class="case">
+<h3><span>04</span>交代勤務に合わせて組む予定表</h3>
+<div class="mock">
+<div class="bar"><span>今週の予定</span><span>自動で振り分け</span></div>
+<div class="week">
+<div class="k">月<i>勤務</i></div><div class="a">火<i>軽い用事</i></div><div>水<i>おでかけ</i></div><div class="k">木<i>勤務</i></div><div class="a">金<i>役所</i></div><div>土<i>自由</i></div><div class="k">日<i>勤務</i></div>
+</div>
+<div class="row" style="margin-top:8px">歯医者の予約<span class="tag on">火曜へ</span></div>
+</div>
+<p>勤務の日・勤務明けの日・休みの日を見分けて、用事を入れる日をAIが選ぶ予定表です。疲れている日には軽い用事だけ、休みの日には遠出、というように振り分けます。</p>
+<p class="kekka">結果：予定を組む手間と、入れすぎの失敗が減りました。</p>
+</div>
+
+<div class="case">
+<h3><span>05</span>動画を、耳で聞くノートに</h3>
+<div class="mock">
+<div class="bar"><span>動画ノート</span><span>貼るだけ</span></div>
+<div class="url">https://youtube.com/watch?v=……</div>
+<div style="text-align:center;color:var(--usu);margin:4px 0">↓ 要点を日本語でまとめて、声にする</div>
+<div class="play"><b></b><em></em><span>12:40</span></div>
+</div>
+<p>動画のアドレスを貼るだけで、話の中身を読み取り、要点を日本語にまとめて音声にします。通勤や家事の間に、耳だけで勉強できます。</p>
+<p class="kekka">結果：見る時間が取れない動画も、聞くだけで追いつけます。</p>
+</div>
+
+<div class="case">
+<h3><span>06</span>この名刺と、このページ</h3>
+<div class="mock">
+<div class="meishi"><div style="text-align:center"><div class="en" style="font-size:11px;letter-spacing:.3em">FIVE RINGS</div><div style="font-size:15px;letter-spacing:.2em;margin-top:4px">名刺</div></div><div class="qr"></div></div>
+</div>
+<p>名刺のデザインから、読み取るとこのページが開くQR、ページの公開と独自のアドレスまで、ひとそろいで作りました。直したい所があれば、その日のうちに直せます。</p>
+<p class="kekka">結果：名刺1枚から、頼めることがすぐ分かる入口になりました。</p>
+</div>
+
+<p class="chu">ほかに：本の出版『そのとき、どう動くか』（2026年8月・電子書籍）、部屋の3D、サボテン・多肉植物の輸出申請の代行。<br>※画面は見本です。お客様の情報は載せていません。</p>
 </section>
 
 <section>

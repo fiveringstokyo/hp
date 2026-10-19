@@ -98,6 +98,61 @@ button{font:inherit;font-size:15px;padding:12px;border:0;border-radius:6px;backg
 .cap{font-size:12px !important;color:var(--usu);margin-top:6px !important}
 .chu{font-size:12px;color:var(--usu);margin-top:26px}
 footer{text-align:center;font-size:12px;color:var(--usu);padding:30px 0 50px;border-top:1px solid var(--sen)}
+/* スマホ：文を少し大きく */
+.job p,.case p,ul.done,dl,.gijutsu{font-size:15px}
+.case .kekka,.job .rei{font-size:14px}
+.case .vis{margin-bottom:4px}
+/* PC（横幅900px以上） */
+@media (min-width:900px){
+body{font-size:17px}
+.wrap{max-width:1200px;padding:0 48px}
+header{padding:88px 0 64px}
+header img{width:120px;height:120px}
+.brand{font-size:18px}
+h1{font-size:40px;margin-top:40px}
+.roma{font-size:19px}
+.lead{font-size:19px;margin-top:28px}
+nav{gap:14px;margin-top:40px}
+nav a{font-size:16px;padding:9px 26px}
+section{display:grid;grid-template-columns:180px 1fr;column-gap:48px;padding:72px 0}
+h2{font-size:24px;letter-spacing:.2em;white-space:nowrap;align-self:start;position:sticky;top:32px}
+h2 small{font-size:14px;margin-top:8px}
+#buppan .sbody,#ai .sbody{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.job:last-child:nth-child(odd){grid-column:span 2}
+.job{padding:24px 26px;border:1px solid var(--sen);border-radius:10px;background:#fbf8f1}
+.job h3{font-size:19px}
+.job p{font-size:16px;margin-top:8px}
+.job .rei{font-size:15px}
+.gijutsu{margin-top:0;padding:28px 34px;font-size:17px}
+.kazu{gap:20px;margin-top:20px}
+.kazu div{font-size:14px}
+.kazu b{font-size:44px}
+.case{display:grid;grid-template-columns:400px 1fr;grid-template-areas:"vis h3" "vis txt";grid-template-rows:auto 1fr;column-gap:44px;margin-top:64px;align-items:start}
+.case h3{grid-area:h3;font-size:22px;margin:4px 0 6px}
+.case .vis{grid-area:vis;margin:0}
+.case .txt{grid-area:txt}
+.case p{font-size:17px}
+.case .kekka{font-size:16px;margin-top:14px}
+.mock{max-width:none;font-size:14px;padding:16px}
+.mock .bar,.mock .tag{font-size:12px}
+.mock .fu small{font-size:12.5px}
+.mock .doc{font-size:13px}
+.mock div[style*="font-size"]{font-size:13px !important}
+.cap{font-size:14px !important}
+.chu{font-size:14px;margin-top:56px}
+dl{font-size:17px;display:grid;grid-template-columns:1fr 1fr;gap:6px 40px;margin-top:0}
+dl dt{margin-top:0}
+dl dd{margin-bottom:22px}
+#renraku .sbody{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.btns{margin-top:0}
+.btns a{font-size:17px;padding:18px}
+form{margin-top:0}
+label{font-size:15px}
+input,textarea{font-size:16px}
+button{font-size:17px;padding:15px}
+footer{font-size:14px;padding:40px 0 64px}
+}
+@media (min-width:900px) and (max-width:1199px){section{grid-template-columns:140px 1fr;column-gap:32px}.case{grid-template-columns:320px 1fr;column-gap:32px}}
 </style>
 </head>
 <body>
@@ -114,6 +169,7 @@ footer{text-align:center;font-size:12px;color:var(--usu);padding:30px 0 50px;bor
 
 <section id="buppan">
 <h2>物販<small>TRADE</small></h2>
+<div class="sbody">
 <div class="job"><h3>輸出（骨董・武具刀剣）</h3>
 <p>日本の骨董や甲冑・刀装具などを、海外のオークションや通販で売ります。</p>
 <p class="rei">例：手元の骨董を海外で売りたい、の相談</p></div>
@@ -123,10 +179,12 @@ footer{text-align:center;font-size:12px;color:var(--usu);padding:30px 0 50px;bor
 <div class="job"><h3>輸入（中国輸入）</h3>
 <p>中国の通販（タオバオなど）からの買い付け・取り寄せを代わりに行います。</p>
 <p class="rei">例：日本では手に入りにくい品の取り寄せ</p></div>
+</div>
 </section>
 
 <section id="ai">
 <h2>AI事業<small>AI WORKS</small></h2>
+<div class="sbody">
 <div class="job"><h3>アプリ・ツール制作</h3>
 <p>毎日の手作業を減らす小さな道具から、スマホで使うアプリまで。</p>
 <p class="rei">例：売上や在庫をまとめる台帳、予約の受付</p></div>
@@ -142,10 +200,12 @@ footer{text-align:center;font-size:12px;color:var(--usu);padding:30px 0 50px;bor
 <div class="job"><h3>暮らしや事業のサポート</h3>
 <p>調べ物、書類づくり、海外とのやりとりの翻訳など、AIを使って困りごとを一緒に片付けます。</p>
 <p class="rei">例：海外の買い手とのやりとり、手続きの下調べ</p></div>
+</div>
 </section>
 
 <section id="jirei">
 <h2>事例<small>WORKS</small></h2>
+<div class="sbody">
 <div class="gijutsu">
 <p>わたしはプログラマーではありません。AIに「こういう物がほしい」と言葉で伝えて作らせ、毎日自分で使いながら直す、というやり方で仕事の道具を増やしてきました。</p>
 <p>専門の言葉が分からなくても、困りごとさえ分かれば形にできます。使う人の目線で作れるのが強みです。</p>
@@ -158,6 +218,7 @@ footer{text-align:center;font-size:12px;color:var(--usu);padding:30px 0 50px;bor
 
 <div class="case">
 <h3><span>01</span>ひとりで動かす、AIの会社</h3>
+<div class="vis">
 <div class="mock">
 <div class="bar"><span>FIVE RINGS オフィス</span><span>スマホの画面</span></div>
 <div class="fu me">この服を、海外で売っておいて</div>
@@ -168,65 +229,88 @@ footer{text-align:center;font-size:12px;color:var(--usu);padding:30px 0 50px;bor
 <div class="ask">物販の担当から：相場は2万〜3万円でした。いくらで出しますか？
 <div class="bt"><span>2万5千円</span><span>3万円</span><span>任せる</span></div></div>
 </div>
+</div>
+<div class="txt">
 <p>写真・調べ物・物販・翻訳・予定・家計など、仕事ごとに担当のAIを置いて、ひとつの画面にまとめました。たとえば「この服を海外で売っておいて」と一言送るだけで、担当どうしが手分けして準備を進め、値段のように人が決めるべき所だけをボタンで聞いてきます。</p>
 <p class="kekka">結果：物販と制作をひとりで回せるようになりました。</p>
+</div>
 </div>
 
 <div class="case">
 <h3><span>02</span>海外のお客様専用の窓</h3>
+<div class="vis">
 <div class="mock">
 <div class="bar"><span>お客様との窓</span><span>韓国語 ⇄ 日本語</span></div>
 <div class="fu">이 선인장도 보낼 수 있나요?<small>このサボテンも送れますか？</small></div>
 <div class="fu me">はい。輸出の許可を取ってから送ります。<small>네. 수출 허가를 받은 뒤 보내드릴게요.</small></div>
 <div class="doc">書類：輸出許可の申請（ワシントン条約）　下書きできました</div>
 </div>
+</div>
+<div class="txt">
 <p>韓国のお客様と、植物の輸出の手続きを進めるための専用ページです。お客様は韓国語、こちらは日本語のまま書けば、AIが訳して届けます。書類の下書きや送る前の確認も、同じ画面で進みます。</p>
 <p class="kekka">結果：言葉の壁なく、海外のお客様と手続きを最後まで進められます。</p>
+</div>
 </div>
 
 <div class="case">
 <h3><span>03</span>甲冑を海外のオークションへ</h3>
+<div class="vis">
 <div class="pics"><figure><img src="img/kacchu1.jpg" alt="甲冑の写真（上半身）" loading="lazy"></figure><figure><img src="img/kacchu2.jpg" alt="甲冑の写真（全身）" loading="lazy"></figure></div>
 <p class="cap">出品した甲冑。黒い布を背に、自分で撮影しています。</p>
+</div>
+<div class="txt">
 <p>撮影の段取り、英語の説明文、寸法や時代の書き方、発送の手配まで、AIと手分けして進めました。ヨーロッパの美術品オークションで落札され、海外のお客様のもとへ届いています。</p>
 <p class="kekka">結果：海外の売り場でも、出品から発送までひとりで完結。</p>
+</div>
 </div>
 
 <div class="case">
 <h3><span>04</span>動画を、耳で聞くノートに</h3>
+<div class="vis">
 <div class="mock">
 <div class="bar"><span>動画ノート</span><span>貼るだけ</span></div>
 <div class="url">https://youtube.com/watch?v=……</div>
 <div style="text-align:center;color:var(--usu);margin:4px 0">↓ 要点を日本語でまとめて、声にする</div>
 <div class="play"><b></b><em></em><span>12:40</span></div>
 </div>
+</div>
+<div class="txt">
 <p>動画のアドレスを貼るだけで、話の中身を読み取り、要点を日本語にまとめて音声にします。移動や家事の間に、耳だけで勉強できます。</p>
 <p class="kekka">結果：見る時間が取れない動画も、聞くだけで追いつけます。</p>
+</div>
 </div>
 
 <div class="case">
 <h3><span>05</span>この名刺と、このページ</h3>
+<div class="vis">
 <div class="pics one"><figure><img src="img/meishi_omote.jpg" alt="名刺の表" loading="lazy"></figure><figure><img src="img/meishi_ura.jpg" alt="名刺の裏" loading="lazy"></figure></div>
 <p class="cap">実際の名刺（表と裏）。左下のQRから、このページが開きます。</p>
+</div>
+<div class="txt">
 <p>名刺のデザインから、読み取るとこのページが開くQR、ページの公開と独自のアドレスまで、ひとそろいで作りました。直したい所があれば、その日のうちに直せます。</p>
 <p class="kekka">結果：名刺1枚から、頼めることがすぐ分かる入口になりました。</p>
 </div>
+</div>
 
 <p class="chu">ほかに：部屋の3D、サボテン・多肉植物の輸出申請の代行。<br>※01・02・04の画面は見本です。お客様の情報は載せていません。</p>
+</div>
 </section>
 
 <section>
 <h2>よくある質問<small>Q&amp;A</small></h2>
+<div class="sbody">
 <dl>
-<dt>個人でも頼めますか？</dt><dd>はい。個人の方・個人事業主の方からのご相談が中心です。</dd>
-<dt>遠くに住んでいても大丈夫ですか？</dt><dd>ほとんどの仕事はオンラインのやりとりで進められます。</dd>
-<dt>料金はいくらですか？</dt><dd>内容をうかがってから、先にお見積りをお出しします。</dd>
-<dt>相談だけでもいいですか？</dt><dd>はい。まずはお気軽にどうぞ。</dd>
+<div><dt>個人でも頼めますか？</dt><dd>はい。個人の方・個人事業主の方からのご相談が中心です。</dd></div>
+<div><dt>遠くに住んでいても大丈夫ですか？</dt><dd>ほとんどの仕事はオンラインのやりとりで進められます。</dd></div>
+<div><dt>料金はいくらですか？</dt><dd>内容をうかがってから、先にお見積りをお出しします。</dd></div>
+<div><dt>相談だけでもいいですか？</dt><dd>はい。まずはお気軽にどうぞ。</dd></div>
 </dl>
+</div>
 </section>
 
 <section id="renraku">
 <h2>連絡する<small>CONTACT</small></h2>
+<div class="sbody">
 <div class="btns">
 <a href="https://www.instagram.com/fiveringstokyo/">Instagram　@fiveringstokyo</a>
 <a href="mailto:jt531905@gmail.com">メール　jt531905@gmail.com</a>
@@ -239,6 +323,7 @@ footer{text-align:center;font-size:12px;color:var(--usu);padding:30px 0 50px;bor
 <p id="sent">送りました。折り返しご連絡します。</p>
 </form>
 <iframe name="hidden_iframe" style="display:none"></iframe>
+</div>
 </section>
 
 <footer>

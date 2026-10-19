@@ -91,6 +91,11 @@ button{font:inherit;font-size:15px;padding:12px;border:0;border-radius:6px;backg
 .mock .play em::before{content:"";position:absolute;left:0;top:0;height:3px;width:38%;background:#fff;border-radius:2px}
 .mock .meishi{aspect-ratio:91/55;border:1px solid var(--sen);border-radius:4px;background:var(--kinari);display:flex;align-items:center;justify-content:center;gap:18px;font-family:'Shippori Mincho',serif}
 .mock .qr{width:40px;height:40px;background:repeating-conic-gradient(var(--sumi) 0 25%,#fff 0 50%) 0 0/10px 10px;border:3px solid #fff;outline:1px solid var(--sumi)}
+.pics{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.pics.one{grid-template-columns:1fr}
+.pics figure{margin:0}
+.pics img{display:block;width:100%;height:auto;border-radius:6px;border:1px solid var(--sen)}
+.cap{font-size:12px !important;color:var(--usu);margin-top:6px !important}
 .chu{font-size:12px;color:var(--usu);margin-top:26px}
 footer{text-align:center;font-size:12px;color:var(--usu);padding:30px 0 50px;border-top:1px solid var(--sen)}
 </style>
@@ -181,11 +186,8 @@ footer{text-align:center;font-size:12px;color:var(--usu);padding:30px 0 50px;bor
 
 <div class="case">
 <h3><span>03</span>甲冑を海外のオークションへ</h3>
-<div class="mock">
-<div class="bar"><span>Auction</span><span>Europe</span></div>
-<div class="lot"><div class="ph"></div>
-<div><b>Japanese Samurai Armour</b><br>Full set<br><span style="color:var(--usu)">with storage box</span><br><span class="sold">SOLD</span></div></div>
-</div>
+<div class="pics"><figure><img src="img/kacchu1.jpg" alt="甲冑の写真（上半身）" loading="lazy"></figure><figure><img src="img/kacchu2.jpg" alt="甲冑の写真（全身）" loading="lazy"></figure></div>
+<p class="cap">出品した甲冑。黒い布を背に、自分で撮影しています。</p>
 <p>撮影の段取り、英語の説明文、寸法や時代の書き方、発送の手配まで、AIと手分けして進めました。ヨーロッパの美術品オークションで落札され、海外のお客様のもとへ届いています。</p>
 <p class="kekka">結果：海外の売り場でも、出品から発送までひとりで完結。</p>
 </div>
@@ -204,14 +206,13 @@ footer{text-align:center;font-size:12px;color:var(--usu);padding:30px 0 50px;bor
 
 <div class="case">
 <h3><span>05</span>この名刺と、このページ</h3>
-<div class="mock">
-<div class="meishi"><div style="text-align:center"><div class="en" style="font-size:11px;letter-spacing:.3em">FIVE RINGS</div><div style="font-size:15px;letter-spacing:.2em;margin-top:4px">名刺</div></div><div class="qr"></div></div>
-</div>
+<div class="pics one"><figure><img src="img/meishi_omote.jpg" alt="名刺の表" loading="lazy"></figure><figure><img src="img/meishi_ura.jpg" alt="名刺の裏" loading="lazy"></figure></div>
+<p class="cap">実際の名刺（表と裏）。左下のQRから、このページが開きます。</p>
 <p>名刺のデザインから、読み取るとこのページが開くQR、ページの公開と独自のアドレスまで、ひとそろいで作りました。直したい所があれば、その日のうちに直せます。</p>
 <p class="kekka">結果：名刺1枚から、頼めることがすぐ分かる入口になりました。</p>
 </div>
 
-<p class="chu">ほかに：本の出版『そのとき、どう動くか』（2026年8月・電子書籍）、部屋の3D、サボテン・多肉植物の輸出申請の代行。<br>※画面は見本です。お客様の情報は載せていません。</p>
+<p class="chu">ほかに：本の出版『そのとき、どう動くか』（2026年8月・電子書籍）、部屋の3D、サボテン・多肉植物の輸出申請の代行。<br>※01・02・04の画面は見本です。お客様の情報は載せていません。</p>
 </section>
 
 <section>

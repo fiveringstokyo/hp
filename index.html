@@ -161,11 +161,30 @@ button{justify-self:start;display:inline-flex;align-items:center;gap:20px;font:i
 button::after{content:"";width:20px;height:1px;background:currentColor}
 button:hover{background:#fff}
 #sent{display:none;font-size:15px;color:#fff}
+.send{display:grid;gap:14px;justify-items:start}
+.fnote{font-size:13px;line-height:1.7;letter-spacing:.06em;color:var(--yoru-sub)}
+footer .lic{display:grid;gap:2px}
+footer .tok{font-size:12px;margin-top:6px;text-wrap:pretty}
+.forwho{margin-top:36px;padding-top:18px;border-top:1px solid var(--line)}
+.forwho p{font-family:var(--mincho);font-size:13px;letter-spacing:.2em;color:var(--sub)}
+.forwho ul{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:6px}
+.forwho a{font-size:14px;line-height:1.7;letter-spacing:.06em;color:var(--ink);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px;text-decoration-color:var(--line);transition:text-decoration-color .3s}
+.forwho a:hover{color:var(--ink);text-decoration-color:var(--ink)}
+.nw,.who span{white-space:nowrap}
+.who{flex-wrap:wrap;row-gap:4px}
+.who b{white-space:nowrap}
 footer{background:var(--yoru);color:var(--yoru-sub);font-size:13px;line-height:1.8;letter-spacing:.08em;padding:0 0 56px}
 footer .row{border-top:1px solid var(--yoru-line);padding-top:32px;display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between;align-items:center}
 footer .mark{color:#e6e3db;font-family:var(--en);letter-spacing:.36em;gap:14px}
 footer .mark img{width:28px;height:28px;border-radius:50%;background:#fff}
 
+@media (max-width:480px){
+.hero figure img{aspect-ratio:4/3;object-position:50% 13%}
+.case{margin-top:72px}
+.case .no{margin-top:26px}
+.hoka{margin-top:72px}
+.vis{padding:36px var(--pad)}
+}
 @media (min-width:720px){
 :root{--pad:48px}
 .hero figure{margin:56px 0 0;max-width:600px}
@@ -184,11 +203,11 @@ body{font-size:17px}
 .top nav a:hover{color:var(--ink);border-bottom-color:var(--ink)}
 .top .go{display:none}
 
-.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,600px);column-gap:72px;padding-top:72px}
-.hero .txt{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto 1fr;column-gap:56px}
-.hero .label{grid-column:1;grid-row:1;align-self:start}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,540px);column-gap:64px;padding-top:72px}
+.hero .txt{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto 1fr;column-gap:48px;align-content:start}
+.hero .label{grid-column:1;grid-row:1;align-self:start;justify-self:end;width:min(100%,24em);margin-bottom:32px}
 .hero h1{grid-column:2;grid-row:1/3;writing-mode:vertical-rl;font-size:clamp(44px,3.9vw,58px);line-height:1.75;letter-spacing:.14em;margin-top:-4px}
-.hero .meta{grid-column:1;grid-row:2;align-self:end;padding-bottom:36px}
+.hero .meta{grid-column:1;grid-row:2;align-self:start;justify-self:end;width:min(100%,24em)}
 .hero .lead{font-size:18px;line-height:2;max-width:22em}
 .hero figure{margin:0;max-width:none}
 .hero figure img{max-height:780px}
@@ -256,9 +275,10 @@ footer{padding-bottom:64px}
 <p class="label">Five Rings — Hachioji, Tokyo</p>
 <h1><span>日本の物を、世界へ。</span><span>手間は、<span class="tcy">AI</span>で軽く。</span></h1>
 <div class="meta">
-<p class="lead"><span class="nb">甲冑・骨董の海外販売と、</span><span class="nb">AIの道具づくり。</span><br><span class="nb">困りごとを、</span><span class="nb">形にするまでひとりで。</span></p>
-<p class="who"><b>加藤一央</b><span style="white-space:nowrap">Kazuteru Kato</span></p>
+<p class="lead"><span class="nb">甲冑・骨董の海外販売と、</span><span class="nb">AIの道具づくり。</span><br><span class="nb nw">困りごとを、</span><span class="nb">形にするまでひとりで。</span></p>
+<p class="who"><b>加藤一央</b><span>Kazuteru Kato</span></p>
 <div class="cta"><a class="btn" href="#renraku">相談する</a><a class="more" href="#jirei">事例を見る</a></div>
+<div class="forwho"><p>こんな方へ</p><ul><li><a href="#shigoto">骨董・甲冑を海外で売りたい</a></li><li><a href="#shigoto">海外へ植物を送りたい・買い付けたい</a></li><li><a href="#shigoto">仕事の道具やページを作りたい</a></li></ul></div>
 </div>
 </div>
 <figure class="fade"><img src="img/hero.jpg" alt="金屏風の前に飾った甲冑" width="1000" height="1340"><figcaption>海外のオークションで落札された甲冑</figcaption></figure>
@@ -277,8 +297,8 @@ footer{padding-bottom:64px}
 <div class="groups">
 <div class="grp"><h3 class="g">物販</h3>
 <div class="list">
-<div class="item"><h3>輸出（骨董・武具刀剣）</h3><p>日本の骨董や甲冑・刀装具などを、海外のオークションや通販で売ります。</p><p class="rei">手元の骨董を海外で売りたい、の相談</p></div>
-<div class="item"><h3>植物の輸出申請の代行</h3><p>サボテン・多肉植物など、ワシントン条約の対象になる植物を海外へ送るための書類づくりと申請を代わりに行います。</p><p class="rei">海外のお客様へ送る株の輸出許可</p></div>
+<div class="item"><h3>輸出（骨董・甲冑・刀装具）</h3><p>日本の骨董や甲冑・刀装具などを、海外のオークションや通販で売ります。</p><p class="rei">手元の骨董を海外で売りたい、の相談</p></div>
+<div class="item"><h3>植物の買い付けと輸出</h3><p>サボテン・多肉植物など、ワシントン条約の対象になる植物を日本で買い付け、輸出の許可を取って海外のお客様へお送りします。送れるかどうかは、植物の種類と送り先の国を確かめてからお返事します。</p><p class="rei">海外のお客様への株の買い付けと発送</p></div>
 <div class="item"><h3>輸入（中国輸入）</h3><p>中国の通販（タオバオなど）からの買い付け・取り寄せを代わりに行います。</p><p class="rei">日本では手に入りにくい品の取り寄せ</p></div>
 </div></div>
 <div class="grp"><h3 class="g">AI事業</h3>
@@ -287,7 +307,7 @@ footer{padding-bottom:64px}
 <div class="item"><h3>SNS運営</h3><p>投稿の画像と文章づくり、続けるための段取りを引き受けます。</p><p class="rei">インスタの投稿を毎週そろえる</p></div>
 <div class="item"><h3>ウェブサイト制作</h3><p>お店や個人の紹介ページを、名刺から開ける1枚から作ります。</p><p class="rei">このページ</p></div>
 <div class="item"><h3>デザイン（平面・3D）</h3><p>名刺・チラシなどの紙物から、部屋や品物の3Dまで。</p><p class="rei">この名刺、部屋の3D</p></div>
-<div class="item"><h3>暮らしや事業のサポート</h3><p>調べ物、書類づくり、海外とのやりとりの翻訳など、AIを使って困りごとを一緒に片付けます。</p><p class="rei">海外の買い手とのやりとり、手続きの下調べ</p></div>
+<div class="item"><h3>暮らしや事業のサポート</h3><p>調べ物、海外とのやりとりの翻訳、手続きの下調べなど、AIを使って困りごとを一緒に片付けます。</p><p class="rei">海外の買い手とのやりとり、手続きの下調べ</p></div>
 </div></div>
 </div>
 </div>
@@ -298,7 +318,7 @@ footer{padding-bottom:64px}
 <div class="shead"><p class="no">02</p><h2>事例</h2><p class="label">Works</p></div>
 <div>
 <p class="intro">わたしはプログラマーではありません。AIに「こういう物がほしい」と言葉で伝えて作らせ、毎日自分で使いながら直す。そのやり方で、仕事の道具を増やしてきました。</p>
-<p class="intro">専門の言葉が分からなくても、<span style="white-space:nowrap">困りごと</span>さえ分かれば形にできます。</p>
+<p class="intro">専門の言葉が分からなくても、困りごとさえ分かれば形にできます。</p>
 </div>
 </div>
 
@@ -315,6 +335,7 @@ footer{padding-bottom:64px}
 <div class="ask">物販の担当から：相場は2万〜3万円でした。いくらで出しますか？
 <div class="bt"><span>2万5千円</span><span>3万円</span><span>任せる</span></div></div>
 </div>
+<p class="cap">画面はイメージです</p>
 </div>
 <div class="txt">
 <p class="no">Case 01</p>
@@ -332,12 +353,13 @@ footer{padding-bottom:64px}
 <div class="fu me">はい。輸出の許可を取ってから送ります。<small>네. 수출 허가를 받은 뒤 보내드릴게요.</small></div>
 <div class="doc">書類：輸出許可の申請（ワシントン条約）　下書きできました</div>
 </div>
+<p class="cap">画面はイメージです</p>
 </div>
 <div class="txt">
 <p class="no">Case 02</p>
 <h3>海外のお客様<br>専用の窓</h3>
 <p>韓国のお客様と、植物の輸出の手続きを進めるための専用ページです。お客様は韓国語、こちらは日本語のまま書けば、AIが訳して届けます。書類の下書きや送る前の確認も、同じ画面で進みます。</p>
-<p class="kekka"><b>Result</b>言葉の壁なく、海外のお客様と手続きを最後まで進められます。</p>
+<p class="kekka"><b>Result</b>言葉の壁なく、海外のお客様と手続きを進められます。</p>
 </div>
 </div>
 
@@ -362,6 +384,7 @@ footer{padding-bottom:64px}
 <p class="note">要点を日本語でまとめて、声にする</p>
 <div class="play"><i></i><em></em><span>12:40</span></div>
 </div>
+<p class="cap">画面はイメージです</p>
 </div>
 <div class="txt">
 <p class="no">Case 04</p>
@@ -379,12 +402,12 @@ footer{padding-bottom:64px}
 <div class="txt">
 <p class="no">Case 05</p>
 <h3>この名刺と、<br>このページ</h3>
-<p>名刺のデザインから、読み取るとこのページが開くQR、ページの公開と独自のアドレスまで、ひとそろいで作りました。直したい所があれば、その日のうちに直せます。</p>
+<p>名刺のデザインから、読み取るとこのページが開くQR、ページの公開と独自のアドレスまで、ひとそろいで作りました。直したい所があれば、自分ですぐに直せる作りです。</p>
 <p class="kekka"><b>Result</b>名刺1枚から、頼めることがすぐ分かる入口になりました。</p>
 </div>
 </div>
 
-<p class="hoka">ほかに：部屋の3D、サボテン・多肉植物の輸出申請の代行。※Case 01・02・04の画面は見本です。お客様の情報は載せていません。</p>
+<p class="hoka">ほかに：部屋の3D、サボテン・多肉植物の買い付けと輸出。</p>
 </div>
 </section>
 
@@ -415,7 +438,7 @@ footer{padding-bottom:64px}
 <label>お名前<input name="entry.843948555" required></label>
 <label>連絡先（メールなど）<input name="entry.1391751486" required></label>
 <label>ご用件<textarea name="entry.1596424081" required></textarea></label>
-<button type="submit">送る</button>
+<div class="send"><button type="submit">送る</button><p class="fnote">いただいた内容は、お返事のためだけに使います。</p></div>
 <p id="sent">送りました。折り返しご連絡します。</p>
 </form>
 <iframe name="hidden_iframe" style="display:none"></iframe>
@@ -426,7 +449,7 @@ footer{padding-bottom:64px}
 <footer>
 <div class="inner"><div class="row">
 <div class="mark"><img src="logo.png" alt="">FIVE RINGS</div>
-<div>古物商許可　東京都公安委員会　第543951800700号</div>
+<div class="lic"><span>古物商許可　東京都公安委員会　第543951800700号</span><span>許可者　加藤一央</span><span class="tok">特定商取引法に基づく表記：住所・電話番号は、ご請求があれば遅滞なくメールでお知らせします。</span></div>
 </div></div>
 </footer>
 

@@ -5,6 +5,8 @@
 
 </script>
 
+</script>
+
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -120,6 +122,21 @@ section{padding-top:120px}
 .real{display:block;width:100%;height:auto;margin:0 auto;box-shadow:0 1px 2px rgba(27,30,39,.08),0 18px 36px -12px rgba(27,30,39,.22)}
 .real.permit{max-width:400px}
 .real.shot{max-width:560px;margin-top:28px}
+.roles{margin-top:36px;display:grid;gap:28px}
+.role h4{font-family:var(--mincho);font-weight:500;margin:0;letter-spacing:.14em;line-height:1.5}
+.role ul{list-style:none;margin:0;padding:0}
+.role li{position:relative}
+.role li::before{content:"";position:absolute;left:0;height:1px}
+.hito{padding-top:14px;border-top:1px solid var(--line)}
+.hito h4{font-size:14px;color:var(--sub)}
+.hito ul{margin-top:6px}
+.hito li{padding-left:16px;font-size:14px;line-height:1.8;color:var(--sub)}
+.hito li::before{top:12px;width:7px;background:var(--sub)}
+.ai{padding-top:16px;border-top:2px solid var(--ai)}
+.ai h4{font-size:18px;color:var(--ai)}
+.ai ul{margin-top:4px}
+.ai li{padding:11px 0 11px 20px;border-bottom:1px solid var(--line);font-size:16px;line-height:1.7;color:var(--ink)}
+.ai li::before{top:24px;width:10px;background:var(--ai)}
 .cards{position:relative;max-width:480px;margin:0 auto;padding-bottom:24%}
 .cards img{width:80%;box-shadow:0 1px 2px rgba(27,30,39,.08),0 18px 36px -12px rgba(27,30,39,.22)}
 .cards img + img{position:absolute;right:0;bottom:0}
@@ -355,6 +372,10 @@ footer{padding-bottom:64px}
 <p class="no">Case 02</p>
 <h3>海外のお客様<br>専用の窓</h3>
 <p>お客様は韓国語、こちらは日本語のまま。AIが訳して届け、サボテンの輸出の書類も同じ画面で進めて、国の許可が下りました。</p>
+<div class="roles">
+<div class="role hito"><h4>人がやること</h4><ul><li>植物を買う・費用を立て替える</li><li>役所への提出と受け取り（お客様ご本人）</li></ul></div>
+<div class="role ai"><h4>AIがやること</h4><ul><li>韓国語と日本語の通訳（お客様との専用の窓）</li><li>輸出できる種類か、学名と条約の区分で判定</li><li>申請書類13点を作り、数と学名を検算</li><li>許可が出る日から逆算して、日程を組む</li></ul></div>
+</div>
 </div>
 </div>
 
@@ -369,6 +390,10 @@ footer{padding-bottom:64px}
 <p class="no">Case 03</p>
 <h3>甲冑を、<br>海外のオークションへ</h3>
 <p>撮影、英語の説明文、発送までAIと進め、ヨーロッパの美術品オークションで落札されました。</p>
+<div class="roles">
+<div class="role hito"><h4>人がやること</h4><ul><li>仕入れを決める・甲冑を撮影する</li><li>最低価格を決める・荷物を渡す</li></ul></div>
+<div class="role ai"><h4>AIがやること</h4><ul><li>海外の落札例を集めて、相場を出す</li><li>英語の説明文を書き、出品の欄を埋める</li><li>手数料・送料・両替まで入れて、利益を計算</li><li>発送の手配、追跡番号の登録、買い手への英語の連絡</li><li>入金を確かめて、売り買いの記録帳に付ける</li></ul></div>
+</div>
 </div>
 </div>
 

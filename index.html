@@ -10,7 +10,7 @@
 <meta name="description" content="東京・八王子のFIVE RINGS。AIを使ったアプリ・ツール制作、ウェブサイト制作、SNS運営、デザイン。自分の商売で使っている道具を、そのまま作ります。">
 <meta property="og:title" content="FIVE RINGS">
 <meta property="og:description" content="ひとりの仕事を、AIで何人分にも。自分の商売で使っているAIの道具を、そのまま作ります。">
-<meta property="og:image" content="https://fiveringstokyo.com/img/kacchu1.jpg">
+<meta property="og:image" content="https://fiveringstokyo.com/img/hero.jpg">
 <meta name="theme-color" content="#f3efe5">
 <link rel="icon" href="icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,8 +27,8 @@
 --en:'EB Garamond',Garamond,serif;
 --pad:24px}
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{margin:0;background:var(--kinari);color:var(--ink);font-family:var(--gothic);font-size:16px;line-height:1.85;letter-spacing:.04em;line-break:strict;word-break:auto-phrase;font-feature-settings:"palt" 0;-webkit-font-smoothing:antialiased}
+html{overflow-x:clip;-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;overflow-x:clip;background:var(--kinari);color:var(--ink);font-family:var(--gothic);font-size:16px;line-height:1.85;letter-spacing:.04em;line-break:strict;word-break:auto-phrase;font-feature-settings:"palt" 0;-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
 a:hover{color:var(--ai)}
@@ -63,12 +63,25 @@ p,dd{margin:0;text-wrap:pretty}
 .btn::after{content:"";width:20px;height:1px;background:currentColor}
 .btn:hover{background:var(--yoru);color:var(--washi)}
 .more{font-size:15px;letter-spacing:.12em;border-bottom:1px solid var(--line);padding-bottom:2px}
-.hero-vis{margin:48px calc(var(--pad)*-1) 0;background:var(--panel);padding:28px var(--pad) 20px}
-.hero-vis .mock{padding:14px 14px 14px}
+.hero-vis{margin-top:48px}
+.collage{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.collage .ph{margin:0;overflow:hidden;background:var(--panel)}
+.collage .ph img{width:100%;height:100%;object-fit:cover}
+.c-hero{grid-column:1/-1;margin:0 calc(var(--pad)*-1) 0!important;aspect-ratio:4/5}
+.c-hero img{object-position:50% 14%}
+.c-s{aspect-ratio:1/1}
+.c-mask img{object-position:50% 0}
+.c-mock{grid-column:1/-1;margin-top:34px}
+.hero-vis .mock{max-width:none;box-shadow:none;border-radius:8px;padding:14px 14px 12px}
 .hero-vis .mock .bar{margin-bottom:6px}
 .hero-vis .mock .row{padding:7px 12px}
 .hero-vis .mock .ask{margin-top:10px;padding:11px 12px}
-.hero-vis .cap{margin-top:14px}
+.hero-vis .mock .cap{margin-top:10px;font-size:11px}
+.hero-vis .hcap{margin-top:16px;text-align:left}
+.rise{animation:rise 1.6s cubic-bezier(.2,.6,.2,1) both}
+.rise.d1{animation-delay:.25s}.rise.d2{animation-delay:.4s}.rise.d3{animation-delay:.55s}.rise.d4{animation-delay:.8s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.rise{animation:none}}
 .mock .row .nm{display:flex;align-items:center;gap:8px}
 .mock .live{width:6px;height:6px;border-radius:50%;background:var(--kin);animation:live 2.8s ease-in-out infinite}
 @keyframes live{0%,100%{opacity:1}50%{opacity:.25}}
@@ -200,7 +213,9 @@ footer .mark img{width:28px;height:28px;border-radius:50%;background:#fff}
 }
 @media (min-width:720px){
 :root{--pad:48px}
-.hero-vis{margin:56px 0 0;max-width:600px;padding:40px 48px 24px}
+.hero-vis{margin-top:56px;max-width:640px}
+.c-hero{margin:0!important}
+.c-mock{max-width:400px}
 .vis{margin:0;padding:64px 48px}
 .kazu b{font-size:48px}
 .kazu div{font-size:14px}
@@ -221,9 +236,21 @@ body{font-size:17px}
 .hero h1{grid-column:2;grid-row:1/3;writing-mode:vertical-rl;font-size:clamp(44px,3.9vw,58px);line-height:1.75;letter-spacing:.14em;margin-top:-4px}
 .hero .meta{grid-column:1;grid-row:2;align-self:start;justify-self:end;width:min(100%,24em)}
 .hero .lead{font-size:18px;line-height:2;max-width:22em}
-.hero-vis{margin:0;max-width:none;min-height:620px;padding:64px 56px 28px;display:flex;flex-direction:column;justify-content:center}
-.hero-vis .mock{width:100%;padding:18px 16px 16px}
-.hero-vis .mock .row{padding:9px 12px}
+.hero{grid-template-columns:minmax(0,560px) minmax(0,1fr);column-gap:56px}
+.hero-vis{margin:0;max-width:none}
+.collage{grid-template-columns:minmax(0,7fr) minmax(0,3fr);grid-template-rows:repeat(3,auto) auto;gap:8px}
+.c-hero{grid-column:1;grid-row:1/4;aspect-ratio:auto;position:relative}
+.c-hero img{position:absolute;inset:0}
+.c-odoshi{grid-column:2;grid-row:1}
+.c-kabuto{grid-column:2;grid-row:2}
+.c-mask{grid-column:2;grid-row:3}
+.c-mock{grid-column:1/-1;grid-row:4;margin:24px 0 0;max-width:none}
+.hero-vis .mock{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:8px;padding:14px 16px 12px}
+.hero-vis .mock .bar,.hero-vis .mock .ask,.hero-vis .mock .cap{grid-column:1/-1}
+.hero-vis .mock .row{padding:7px 12px;margin:4px 0}
+.hero-vis .mock .ask{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.hero-vis .mock .ask .bt{margin-top:0;flex:0 0 auto;width:220px}
+.hero-vis .hcap{margin-top:14px}
 
 .kazu{margin-top:120px}
 .kazu b{font-size:68px;margin-bottom:16px}
@@ -265,6 +292,8 @@ form{margin-top:0}
 footer{padding-bottom:64px}
 }
 @media (min-width:1000px) and (max-width:1199px){
+.hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:40px}
+.hero .txt{column-gap:32px}
 .wrap2{grid-template-columns:200px minmax(0,1fr);column-gap:48px}
 .shead h2{font-size:32px}
 .case,.case.rev{column-gap:56px}
@@ -292,7 +321,13 @@ footer{padding-bottom:64px}
 <div class="cta"><a class="btn" href="#renraku">相談する</a><a class="more" href="#jirei">事例を見る</a></div>
 </div>
 </div>
-<div class="hero-vis fade">
+<div class="hero-vis">
+<div class="collage">
+<figure class="ph c-hero rise"><img src="img/hero.jpg" alt="金屏風の前の甲冑" width="1000" height="1340" loading="eager"></figure>
+<figure class="ph c-s c-odoshi rise d1"><img src="img/d_odoshi.jpg" alt="甲冑の威し糸" width="900" height="900" loading="lazy"></figure>
+<figure class="ph c-s c-kabuto rise d2"><img src="img/d_kabuto.jpg" alt="兜の内側" width="900" height="900" loading="lazy"></figure>
+<figure class="ph c-s c-mask rise d3"><img src="img/d_mask.jpg" alt="甲冑の面頬" width="800" height="800" loading="lazy"></figure>
+<div class="c-mock rise d4">
 <div class="mock" aria-label="AIのオフィスの画面のイメージ">
 <div class="bar"><span>FIVE RINGS オフィス</span><span>いま動いている担当</span></div>
 <div class="row">写真の担当<span class="tag">写真を整えた</span></div>
@@ -302,8 +337,11 @@ footer{padding-bottom:64px}
 <div class="row">台帳の担当<span class="tag">売上を記録した</span></div>
 <div class="ask">決めてほしい所だけ、ボタンで届きます
 <div class="bt"><span>この値段で出す</span><span>任せる</span></div></div>
-</div>
 <p class="cap">画面はイメージです</p>
+</div>
+</div>
+</div>
+<p class="cap hcap">AIの班と回している、自分の商売から</p>
 </div>
 </header>
 

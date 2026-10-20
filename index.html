@@ -1,14 +1,16 @@
 <!doctype html>
 <html lang="ja">
 <head>
+</script>
+
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>FIVE RINGS｜ひとりの仕事を、AIで何人分にも</title>
-<meta name="description" content="東京・八王子のFIVE RINGS。甲冑・骨董の海外販売、植物の買い付けと輸出、中国輸入。AIを使ったアプリ・ツール制作、SNS運営、ウェブサイト制作、デザイン。">
+<meta name="description" content="東京・八王子のFIVE RINGS。AIを使ったアプリ・ツール制作、ウェブサイト制作、SNS運営、デザイン。自分の商売で使っている道具を、そのまま作ります。">
 <meta property="og:title" content="FIVE RINGS">
 <meta property="og:description" content="ひとりの仕事を、AIで何人分にも。自分の商売で使っているAIの道具を、そのまま作ります。">
-<meta property="og:image" content="https://fiveringstokyo.com/img/hero.jpg">
+<meta property="og:image" content="https://fiveringstokyo.com/img/kacchu1.jpg">
 <meta name="theme-color" content="#f3efe5">
 <link rel="icon" href="icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,8 +63,21 @@ p,dd{margin:0;text-wrap:pretty}
 .btn::after{content:"";width:20px;height:1px;background:currentColor}
 .btn:hover{background:var(--yoru);color:var(--washi)}
 .more{font-size:15px;letter-spacing:.12em;border-bottom:1px solid var(--line);padding-bottom:2px}
-.hero figure{margin:56px calc(var(--pad)*-1) 0}
-.hero figure img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 40%}
+.hero-vis{margin:48px calc(var(--pad)*-1) 0;background:var(--panel);padding:28px var(--pad) 20px}
+.hero-vis .mock{padding:14px 14px 14px}
+.hero-vis .mock .bar{margin-bottom:6px}
+.hero-vis .mock .row{padding:7px 12px}
+.hero-vis .mock .ask{margin-top:10px;padding:11px 12px}
+.hero-vis .cap{margin-top:14px}
+.mock .row .nm{display:flex;align-items:center;gap:8px}
+.mock .live{width:6px;height:6px;border-radius:50%;background:var(--kin);animation:live 2.8s ease-in-out infinite}
+@keyframes live{0%,100%{opacity:1}50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){.mock .live{animation:none}}
+.svc{max-width:760px}
+.svc .list{border-top:1px solid var(--rule)}
+.svcnote{margin-top:28px;font-size:14px;line-height:1.85;color:var(--sub)}
+.svcnote a{color:var(--ink);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;text-decoration-color:var(--line)}
+.svcnote a:hover{text-decoration-color:var(--ink)}
 figcaption,.cap{font-size:13px;line-height:1.7;color:var(--sub);letter-spacing:.08em}
 .hero figcaption{padding:12px var(--pad) 0}
 .fade{animation:fade 1.4s ease-out both}
@@ -178,7 +193,6 @@ footer .mark{color:#e6e3db;font-family:var(--en);letter-spacing:.36em;gap:14px}
 footer .mark img{width:28px;height:28px;border-radius:50%;background:#fff}
 
 @media (max-width:480px){
-.hero figure img{aspect-ratio:4/3;object-position:50% 13%}
 .case{margin-top:72px}
 .case .no{margin-top:26px}
 .hoka{margin-top:72px}
@@ -186,8 +200,7 @@ footer .mark img{width:28px;height:28px;border-radius:50%;background:#fff}
 }
 @media (min-width:720px){
 :root{--pad:48px}
-.hero figure{margin:56px 0 0;max-width:600px}
-.hero figcaption{padding:12px 0 0}
+.hero-vis{margin:56px 0 0;max-width:600px;padding:40px 48px 24px}
 .vis{margin:0;padding:64px 48px}
 .kazu b{font-size:48px}
 .kazu div{font-size:14px}
@@ -208,8 +221,9 @@ body{font-size:17px}
 .hero h1{grid-column:2;grid-row:1/3;writing-mode:vertical-rl;font-size:clamp(44px,3.9vw,58px);line-height:1.75;letter-spacing:.14em;margin-top:-4px}
 .hero .meta{grid-column:1;grid-row:2;align-self:start;justify-self:end;width:min(100%,24em)}
 .hero .lead{font-size:18px;line-height:2;max-width:22em}
-.hero figure{margin:0;max-width:none}
-.hero figure img{max-height:780px}
+.hero-vis{margin:0;max-width:none;min-height:620px;padding:64px 56px 28px;display:flex;flex-direction:column;justify-content:center}
+.hero-vis .mock{width:100%;padding:18px 16px 16px}
+.hero-vis .mock .row{padding:9px 12px}
 
 .kazu{margin-top:120px}
 .kazu b{font-size:68px;margin-bottom:16px}
@@ -278,7 +292,19 @@ footer{padding-bottom:64px}
 <div class="cta"><a class="btn" href="#renraku">相談する</a><a class="more" href="#jirei">事例を見る</a></div>
 </div>
 </div>
-<figure class="fade"><img src="img/hero.jpg" alt="金屏風の前に飾った甲冑" width="1000" height="1340"><figcaption>海外のオークションで落札された甲冑</figcaption></figure>
+<div class="hero-vis fade">
+<div class="mock" aria-label="AIのオフィスの画面のイメージ">
+<div class="bar"><span>FIVE RINGS オフィス</span><span>いま動いている担当</span></div>
+<div class="row">写真の担当<span class="tag">写真を整えた</span></div>
+<div class="row">調べ物の担当<span class="tag">海外の相場を調べた</span></div>
+<div class="row"><span class="nm"><i class="live"></i>翻訳の担当</span><span class="tag">韓国語に訳して届けた</span></div>
+<div class="row">物販の担当<span class="tag">英語の説明文を書いた</span></div>
+<div class="row">台帳の担当<span class="tag">売上を記録した</span></div>
+<div class="ask">決めてほしい所だけ、ボタンで届きます
+<div class="bt"><span>この値段で出す</span><span>任せる</span></div></div>
+</div>
+<p class="cap">画面はイメージです</p>
+</div>
 </header>
 
 <div class="kazu">
@@ -291,21 +317,15 @@ footer{padding-bottom:64px}
 <section id="shigoto">
 <div class="inner wrap2">
 <div class="shead"><p class="no">01</p><h2>頼めること</h2><p class="label">Services</p></div>
-<div class="groups">
-<div class="grp"><h3 class="g">物販</h3>
-<div class="list">
-<div class="item"><h3>輸出（骨董・甲冑・刀装具）</h3><p>海外のオークションや通販で売ります。</p></div>
-<div class="item"><h3>植物の買い付けと輸出</h3><p>サボテン・多肉植物を日本で買い付け、輸出の許可を取ってお送りします。送れるかは種類と国によります。</p></div>
-<div class="item"><h3>輸入（中国輸入）</h3><p>タオバオなど中国の通販から取り寄せます。</p></div>
-</div></div>
-<div class="grp"><h3 class="g">AI事業</h3>
+<div class="svc">
 <div class="list">
 <div class="item"><h3>アプリ・ツール制作</h3><p>手作業を減らす道具から、スマホのアプリまで。</p></div>
-<div class="item"><h3>SNS運営</h3><p>投稿の画像と文章を作ります。</p></div>
 <div class="item"><h3>ウェブサイト制作</h3><p>このページのような紹介ページを作ります。</p></div>
+<div class="item"><h3>SNS運営</h3><p>投稿の画像と文章を作ります。</p></div>
 <div class="item"><h3>デザイン（平面・3D）</h3><p>名刺・チラシから、部屋や品物の3Dまで。</p></div>
 <div class="item"><h3>暮らしや事業のサポート</h3><p>調べ物や翻訳など、AIで困りごとを片付けます。</p></div>
-</div></div>
+</div>
+<p class="svcnote">骨董・甲冑の海外販売は、自分の商売として営んでいます。同じAIの道具で回している様子は、<a href="#jirei">事例</a>でどうぞ。</p>
 </div>
 </div>
 </section>

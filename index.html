@@ -3,6 +3,8 @@
 <head>
 </script>
 
+</script>
+
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -49,12 +51,9 @@ p,dd{margin:0;text-wrap:pretty}
 
 /* 表紙 */
 .hero{padding-top:48px}
-.hero .label{margin-bottom:28px;display:flex;align-items:center;gap:14px}
-.hero .label::before{content:"";width:24px;height:1px;background:var(--kin)}
 .hero h1{font-size:min(calc((100vw - 48px)/10.4),44px);line-height:1.6;letter-spacing:.04em;font-weight:500}
 .hero h1 > span{display:block;white-space:nowrap}
 .tcy{text-combine-upright:all;-webkit-text-combine:horizontal}
-.hero .lead{margin-top:28px;color:var(--sub)}
 .who{margin-top:32px;display:flex;align-items:baseline;gap:18px;padding-top:20px;border-top:1px solid var(--line)}
 .who b{font-family:var(--mincho);font-weight:500;font-size:20px;letter-spacing:.32em}
 .who span{font-family:var(--en);font-style:italic;font-size:16px;color:var(--sub);letter-spacing:.1em}
@@ -64,35 +63,19 @@ p,dd{margin:0;text-wrap:pretty}
 .btn:hover{background:var(--yoru);color:var(--washi)}
 .more{font-size:15px;letter-spacing:.12em;border-bottom:1px solid var(--line);padding-bottom:2px}
 .hero-vis{margin-top:48px}
-.collage{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
 .collage .ph{margin:0;overflow:hidden;background:var(--panel)}
 .collage .ph img{width:100%;height:100%;object-fit:cover}
-.c-hero{grid-column:1/-1;margin:0 calc(var(--pad)*-1) 0!important;aspect-ratio:4/5}
+.c-hero{margin:0 calc(var(--pad)*-1) 0!important;aspect-ratio:4/5}
 .c-hero img{object-position:50% 14%}
-.c-s{aspect-ratio:1/1}
-.c-mask img{object-position:50% 0}
-.c-mock{grid-column:1/-1;margin-top:34px}
-.hero-vis .mock{max-width:none;box-shadow:none;border-radius:8px;padding:14px 14px 12px}
-.hero-vis .mock .bar{margin-bottom:6px}
-.hero-vis .mock .row{padding:7px 12px}
-.hero-vis .mock .ask{margin-top:10px;padding:11px 12px}
-.hero-vis .mock .cap{margin-top:10px;font-size:11px}
-.hero-vis .hcap{margin-top:16px;text-align:left}
 .rise{animation:rise 1.6s cubic-bezier(.2,.6,.2,1) both}
-.rise.d1{animation-delay:.25s}.rise.d2{animation-delay:.4s}.rise.d3{animation-delay:.55s}.rise.d4{animation-delay:.8s}
 @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){.rise{animation:none}}
-.mock .row .nm{display:flex;align-items:center;gap:8px}
-.mock .live{width:6px;height:6px;border-radius:50%;background:var(--kin);animation:live 2.8s ease-in-out infinite}
-@keyframes live{0%,100%{opacity:1}50%{opacity:.25}}
-@media (prefers-reduced-motion:reduce){.mock .live{animation:none}}
 .svc{max-width:760px}
 .svc .list{border-top:1px solid var(--rule)}
 .svcnote{margin-top:28px;font-size:14px;line-height:1.85;color:var(--sub)}
 .svcnote a{color:var(--ink);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;text-decoration-color:var(--line)}
 .svcnote a:hover{text-decoration-color:var(--ink)}
 figcaption,.cap{font-size:13px;line-height:1.7;color:var(--sub);letter-spacing:.08em}
-.hero figcaption{padding:12px var(--pad) 0}
 .fade{animation:fade 1.4s ease-out both}
 @keyframes fade{from{opacity:0}to{opacity:1}}
 @media (prefers-reduced-motion:reduce){.fade{animation:none}}
@@ -215,7 +198,6 @@ footer .mark img{width:28px;height:28px;border-radius:50%;background:#fff}
 :root{--pad:48px}
 .hero-vis{margin-top:56px;max-width:640px}
 .c-hero{margin:0!important}
-.c-mock{max-width:400px}
 .vis{margin:0;padding:64px 48px}
 .kazu b{font-size:48px}
 .kazu div{font-size:14px}
@@ -230,27 +212,11 @@ body{font-size:17px}
 .top nav a:hover{color:var(--ink);border-bottom-color:var(--ink)}
 .top .go{display:none}
 
-.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,540px);column-gap:64px;padding-top:72px}
-.hero .txt{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto 1fr;column-gap:48px;align-content:start}
-.hero .label{grid-column:1;grid-row:1;align-self:start;justify-self:end;width:min(100%,24em);margin-bottom:32px}
-.hero h1{grid-column:2;grid-row:1/3;writing-mode:vertical-rl;font-size:clamp(44px,3.9vw,58px);line-height:1.75;letter-spacing:.14em;margin-top:-4px}
-.hero .meta{grid-column:1;grid-row:2;align-self:start;justify-self:end;width:min(100%,24em)}
-.hero .lead{font-size:18px;line-height:2;max-width:22em}
-.hero{grid-template-columns:minmax(0,560px) minmax(0,1fr);column-gap:56px}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:64px;align-items:start;padding-top:72px}
+.hero .txt{display:flex;justify-content:center}
+.hero h1{writing-mode:vertical-rl;font-size:clamp(44px,3.9vw,58px);line-height:1.75;letter-spacing:.14em;margin-top:-4px}
 .hero-vis{margin:0;max-width:none}
-.collage{grid-template-columns:minmax(0,7fr) minmax(0,3fr);grid-template-rows:repeat(3,auto) auto;gap:8px}
-.c-hero{grid-column:1;grid-row:1/4;aspect-ratio:auto;position:relative}
-.c-hero img{position:absolute;inset:0}
-.c-odoshi{grid-column:2;grid-row:1}
-.c-kabuto{grid-column:2;grid-row:2}
-.c-mask{grid-column:2;grid-row:3}
-.c-mock{grid-column:1/-1;grid-row:4;margin:24px 0 0;max-width:none}
-.hero-vis .mock{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:8px;padding:14px 16px 12px}
-.hero-vis .mock .bar,.hero-vis .mock .ask,.hero-vis .mock .cap{grid-column:1/-1}
-.hero-vis .mock .row{padding:7px 12px;margin:4px 0}
-.hero-vis .mock .ask{display:flex;align-items:center;justify-content:space-between;gap:16px}
-.hero-vis .mock .ask .bt{margin-top:0;flex:0 0 auto;width:220px}
-.hero-vis .hcap{margin-top:14px}
+.c-hero{aspect-ratio:1000/1340;height:clamp(480px,calc(100vh - 240px),640px);width:auto}
 
 .kazu{margin-top:120px}
 .kazu b{font-size:68px;margin-bottom:16px}
@@ -292,8 +258,6 @@ form{margin-top:0}
 footer{padding-bottom:64px}
 }
 @media (min-width:1000px) and (max-width:1199px){
-.hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:40px}
-.hero .txt{column-gap:32px}
 .wrap2{grid-template-columns:200px minmax(0,1fr);column-gap:48px}
 .shead h2{font-size:32px}
 .case,.case.rev{column-gap:56px}
@@ -314,21 +278,12 @@ footer{padding-bottom:64px}
 
 <header class="hero">
 <div class="txt fade">
-<p class="label">Five Rings — Hachioji, Tokyo</p>
 <h1><span>ひとりの仕事を、</span><span><span class="tcy">AI</span>で何人分にも。</span></h1>
-<div class="meta">
-<p class="lead"><span class="nb">自分の商売で使っている</span><span class="nb">AIの道具を、そのまま作ります。</span></p>
-<div class="cta"><a class="btn" href="#renraku">相談する</a><a class="more" href="#jirei">事例を見る</a></div>
-</div>
 </div>
 <div class="hero-vis">
 <div class="collage">
 <figure class="ph c-hero rise"><img src="img/hero.jpg" alt="金屏風の前の甲冑" width="1000" height="1340" loading="eager"></figure>
-<figure class="ph c-s c-odoshi rise d1"><img src="img/d_odoshi.jpg" alt="甲冑の威し糸" width="900" height="900" loading="lazy"></figure>
-<figure class="ph c-s c-kabuto rise d2"><img src="img/d_kabuto.jpg" alt="兜の内側" width="900" height="900" loading="lazy"></figure>
-<figure class="ph c-s c-mask rise d3"><img src="img/d_mask.jpg" alt="甲冑の面頬" width="800" height="800" loading="lazy"></figure>
 </div>
-<p class="cap hcap">AIの班と回している、自分の商売から</p>
 </div>
 </header>
 
